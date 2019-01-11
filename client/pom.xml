@@ -9,8 +9,8 @@
     <description>Remote Java Robot Client</description>
 
     <parent>
-        <artifactId>tests-utils-parent</artifactId>
-        <groupId>com.propellerads.utils</groupId>
+        <groupId>com.easytest.utils.remotejavarobot</groupId>
+        <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
 

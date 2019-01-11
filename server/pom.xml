@@ -4,13 +4,13 @@
     <groupId>com.easytest.utils.remotejavarobot</groupId>
     <artifactId>server</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
+    <!--<packaging>jar</packaging>-->
 
     <description>Remote Java Robot Server</description>
 
     <parent>
-        <artifactId>tests-utils-parent</artifactId>
-        <groupId>com.propellerads.utils</groupId>
+        <groupId>com.easytest.utils.remotejavarobot</groupId>
+        <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
 
@@ -33,5 +33,34 @@
             <version>20030203.000550</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <finalName>RemoteJavaRobot</finalName>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.easytest.utils.remotejavarobot.server.Server</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
