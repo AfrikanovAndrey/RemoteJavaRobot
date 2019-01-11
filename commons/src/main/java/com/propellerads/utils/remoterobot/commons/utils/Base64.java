@@ -1,4 +1,4 @@
-package com.easytest.utils.remotejavarobot.commons;
+package com.propellerads.utils.remoterobot.commons.utils;
 
 import java.io.*;
 import java.nio.ByteBuffer;
