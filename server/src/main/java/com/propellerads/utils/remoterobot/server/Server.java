@@ -1,5 +1,6 @@
-package com.easytest.utils.remotejavarobot.server;
+package com.propellerads.utils.remoterobot.server;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import org.apache.mina.core.session.IdleStatus;
@@ -14,11 +15,8 @@ public class Server {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Server.class);
 
-    public Server() {
-    }
-
-    public static void main(String[] var0) throws IOException {
-        String portParamString = "";
+    public static void main(String[] var0) throws IOException, AWTException {
+        String portParamString;
         if (var0.length > 0) {
             portParamString = var0[0];
         } else {
@@ -39,6 +37,5 @@ public class Server {
         } else {
             LOGGER.error("Invalid port number");
         }
-
     }
 }

@@ -1,36 +1,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.easytest.utils.remotejavarobot</groupId>
-    <artifactId>client</artifactId>
+    <groupId>com.propellerads.utils</groupId>
+    <artifactId>remote-robot-client</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <description>Remote Java Robot Client</description>
 
     <parent>
-        <groupId>com.easytest.utils.remotejavarobot</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>com.propellerads.utils</groupId>
+        <artifactId>remote-robot-parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>com.easytest.utils.remotejavarobot</groupId>
-            <artifactId>commons</artifactId>
+            <groupId>com.propellerads.utils</groupId>
+            <artifactId>remote-robot-commons</artifactId>
             <version>1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.mina</groupId>
-            <artifactId>mina-core</artifactId>
-            <version>2.0.19</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>20030203.000550</version>
         </dependency>
     </dependencies>
 
