@@ -80,7 +80,7 @@ public class RemoteRobot {
         Response response = sendCommandMessage(
                 new Request(GET_PIXEL_COLOR, x, y)
         );
-        return (Color) response.getResultObject();
+        return response.getResultObject() == null ? null : (Color)response.getResultObject();
     }
 
     /**
