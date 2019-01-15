@@ -20,7 +20,7 @@ public class ServerHandler extends IoHandlerAdapter {
     public void messageReceived(IoSession session, Object requestObject) {
         Request request = (Request) requestObject;
 
-        switch (request.getCommand()) {
+        switch (request.getOperation()) {
             case KEY_PRESS:
                 response = new KeyUtil().keyPress(
                         Integer.parseInt(request.getOperands().get(0).toString())
@@ -64,7 +64,7 @@ public class ServerHandler extends IoHandlerAdapter {
                 break;
 
             default:
-                throw new RuntimeException("Not supported operation: " + request.getCommand());
+                throw new RuntimeException("Not supported operation: " + request.getOperation());
         }
 
         session.write(this.response);

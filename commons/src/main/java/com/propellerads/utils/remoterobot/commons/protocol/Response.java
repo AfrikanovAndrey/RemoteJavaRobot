@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class Response implements Serializable {
 
-    private Operation command;
+    private Operation operation;
     private boolean success;
     private String message;
     private Object resultObject;
 
-    public Response(Operation command) {
-        this.command = command;
+    public Response(Operation operation) {
+        this.operation = operation;
     }
 
     public Response withMessage(final String message) {
@@ -28,8 +28,8 @@ public class Response implements Serializable {
         return this;
     }
 
-    public Operation getCommand() {
-        return command;
+    public Operation getOperation() {
+        return operation;
     }
 
     public boolean isSuccess() {

@@ -48,4 +48,17 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>artifactory01.rtty.in-releases</name>
+            <url>http://artifactory01.rtty.in:8081/artifactory/ext-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>artifactory01.rtty.in-snapshots</name>
+            <url>http://artifactory01.rtty.in:8081/artifactory/ext-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>

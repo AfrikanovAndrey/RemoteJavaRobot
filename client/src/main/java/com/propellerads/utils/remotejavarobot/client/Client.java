@@ -39,11 +39,15 @@ public class Client {
                 response = ((ClientHandler) session.getHandler()).getResponse();
                 session.close(true);
             } else {
-                LOGGER.error("Server is not reachable... IP[" + ip + "] " + "Port[" + port + "]");
+                response = new Response(request.getOperation())
+                        .withSuccess(false)
+                        .withMessage("Server is not reachable... IP[" + ip + "] " + "Port[" + port + "]");
             }
             socketConnector.dispose();
         } catch (Exception e) {
-            LOGGER.error("Error in interaction with Remote Robot Server: " + e.getMessage() );
+            response = new Response(request.getOperation())
+                    .withSuccess(false)
+                    .withMessage("Error in interaction with Remote Robot Server: " + e.getMessage() );
         }
 
         // Log result of interaction

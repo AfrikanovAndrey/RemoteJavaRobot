@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Request implements Serializable {
 
-    private Operation command;
+    private Operation operation;
     private List<Object> operands;
 
-    public Request(Operation command, Object... operands) {
-        this.command = command;
+    public Request(Operation operation, Object... operands) {
+        this.operation = operation;
         this.operands = Arrays.asList(operands);
     }
 
-    public Operation getCommand() {
-        return command;
+    public Operation getOperation() {
+        return operation;
     }
 
     public List<Object> getOperands() {
