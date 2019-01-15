@@ -1,4 +1,4 @@
-package com.propellerads.utils.remotejavarobot.client;
+package com.propellerads.utils.remoterobot.client;
 
 import com.propellerads.utils.remoterobot.commons.utils.Base64;
 import com.propellerads.utils.remoterobot.commons.protocol.Request;
@@ -6,10 +6,7 @@ import com.propellerads.utils.remoterobot.commons.protocol.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
@@ -39,7 +36,7 @@ public class RemoteRobot {
      * Press & release keyboard key
      *
      * @param keyCode {@link java.awt.event.KeyEvent}
-     * @return
+     * @return success flag
      */
     public boolean pressAndReleaseKey(int keyCode) {
         return pressKey(keyCode) && releaseKey(keyCode);
@@ -49,7 +46,7 @@ public class RemoteRobot {
      * Press keyboard key on remote server
      *
      * @param keyCode {@link java.awt.event.KeyEvent}
-     * @return
+     * @return success flag
      */
     public boolean pressKey(int keyCode) {
         return sendCommandMessage(
@@ -61,7 +58,7 @@ public class RemoteRobot {
      * Release keyboard key on remote server
      *
      * @param keyCode {@link java.awt.event.KeyEvent}
-     * @return
+     * @return success flag
      */
     public boolean releaseKey(int keyCode) {
         return sendCommandMessage(
@@ -105,7 +102,7 @@ public class RemoteRobot {
      * Capture remote screen with saving to required file
      *
      * @param fileNameSaveTo
-     * @return
+     * @return success flag
      */
     public boolean captureScreen(String fileNameSaveTo) {
         Response response = sendCommandMessage(new Request(CAPTURE_SCREEN));
@@ -138,7 +135,7 @@ public class RemoteRobot {
      * Capture remote screen partially with saving to required file
      *
      * @param fileNameSaveTo
-     * @return
+     * @return success flag
      */
     public boolean capturePartiallyScreen(String fileNameSaveTo, int x0, int y0, int x1, int y1) {
         Response response = sendCommandMessage(new Request(CAPTURE_SCREEN_PARTIALLY, x0, y0, x1, y1));

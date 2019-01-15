@@ -1,4 +1,4 @@
-package com.propellerads.utils.remotejavarobot.client;
+package com.propellerads.utils.remoterobot.client;
 
 import com.propellerads.utils.remoterobot.commons.protocol.Request;
 import com.propellerads.utils.remoterobot.commons.protocol.Response;

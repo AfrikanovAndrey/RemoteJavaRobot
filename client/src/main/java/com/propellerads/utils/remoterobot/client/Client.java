@@ -1,4 +1,4 @@
-package com.propellerads.utils.remotejavarobot.client;
+package com.propellerads.utils.remoterobot.client;
 
 import com.propellerads.utils.remoterobot.commons.protocol.Request;
 import com.propellerads.utils.remoterobot.commons.protocol.Response;
@@ -37,6 +37,11 @@ public class Client {
                 session.getConfig().setUseReadOperation(true);
                 session.getCloseFuture().awaitUninterruptibly();
                 response = ((ClientHandler) session.getHandler()).getResponse();
+                if (response == null){
+                    response = new Response(request.getOperation())
+                            .withSuccess(false)
+                            .withMessage("Bad response from server");
+                }
                 session.close(true);
             } else {
                 response = new Response(request.getOperation())

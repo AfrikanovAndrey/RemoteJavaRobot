@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.propellerads.utils</groupId>
     <artifactId>remote-robot-client</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <description>Remote Java Robot Client</description>
