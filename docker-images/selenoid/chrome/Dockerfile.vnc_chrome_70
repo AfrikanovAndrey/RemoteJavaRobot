@@ -16,5 +16,3 @@ USER selenium
 EXPOSE 5555
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-
