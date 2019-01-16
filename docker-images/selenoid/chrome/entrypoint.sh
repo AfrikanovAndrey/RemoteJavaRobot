@@ -3,7 +3,6 @@ SCREEN_RESOLUTION=${SCREEN_RESOLUTION:-"1920x1080x24"}
 ENABLE_WINDOW_MANAGER=${ENABLE_WINDOW_MANAGER:-""}
 DISPLAY=99
 
-
 clean() {
   if [ -n "$FILESERVER_PID" ]; then
     kill -TERM "$FILESERVER_PID"
@@ -55,7 +54,6 @@ if [ "$ENABLE_VNC" == "true" ]; then
     x11vnc -display ":$DISPLAY" -passwd selenoid -shared -forever -loop500 -rfbport 5900 -rfbportv6 5900 -logfile /home/selenium/x11vnc.log &
     X11VNC_PID=$!
 fi
-
 
 export DISPLAY=:99
 echo "Starting Remote Robot Server..."
