@@ -1,2 +1,2 @@
 language: java
-script: ./docker-images/build_and_deploy.sh
+script: ./docker-images/job.sh
