@@ -61,4 +61,3 @@ java -jar /remote-robot-server/remote-robot-server-1.0.jar 5555
 REMOTE_ROBOT_SERVER_PID=$!
 
 wait
-
