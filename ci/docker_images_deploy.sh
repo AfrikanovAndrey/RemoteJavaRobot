@@ -3,7 +3,7 @@
 echo "# Build Selenoid browser images"
 
 echo "### Build 'vnc_chrome_70' Docker image..."
-cd /docker-images/selenoid/chrome/70
+cd docker-images/selenoid/chrome/70
 docker build -t aafrikanov/selenoid_images_wth_remote_java_robot:vnc_chrome_70 .
 
 echo "# Login to DockerHub"
