@@ -21,7 +21,7 @@ public class Client {
     }
 
     public Response sendMessage(Request request, String ip, int port) {
-        Response response = null;
+        Response response;
 
         try {
             NioSocketConnector socketConnector = new NioSocketConnector();

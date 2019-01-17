@@ -1,0 +1,18 @@
+FROM selenoid/vnc:chrome_65.0
+
+USER root
+
+RUN apt-get update && \
+		apt-get -y install default-jre
+
+COPY docker-images/selenoid/chrome/entrypoint.sh /
+COPY server/target/remote-robot-server-1.0.jar /remote-robot-server/
+#COPY ./../entrypoint.sh /
+#COPY ./../../../server/target/remote-robot-server-1.0.jar /remote-robot-server/
+#COPY ./server/target/remote-robot-server-1.0.jar /remote-robot-server/
+
+USER selenium
+
+EXPOSE 5555
+
+ENTRYPOINT ["/entrypoint.sh"]

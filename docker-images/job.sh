@@ -8,7 +8,10 @@ echo "### Login to DockerHub ###"
 echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USER_NAME --password-stdin
 
 
+BROWSER=chrome TAG=vnc_chrome_65 docker-images/build_and_deploy_image.sh
+BROWSER=chrome TAG=vnc_chrome_67 docker-images/build_and_deploy_image.sh
 BROWSER=chrome TAG=vnc_chrome_70 docker-images/build_and_deploy_image.sh
+
 
 
 # 'awk' don't work in Travis :(
