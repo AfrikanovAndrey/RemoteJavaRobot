@@ -1,15 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.propellerads.utils</groupId>
-    <artifactId>remote-robot-commons</artifactId>
-    <version>1.0</version>
+    <groupId>com.github.remoterobot</groupId>
+    <artifactId>commons</artifactId>
+    <version>0.1.5-BETA</version>
 
-    <description>Remote Java Robot Commons</description>
+    <description>Remote Robot Commons</description>
 
     <parent>
-        <groupId>com.propellerads.utils</groupId>
-        <artifactId>remote-robot-parent</artifactId>
-        <version>1.0</version>
+        <groupId>com.github.remoterobot</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.1.5-BETA</version>
     </parent>
+
 </project>

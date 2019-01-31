@@ -1,24 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.propellerads.utils</groupId>
-    <artifactId>remote-robot-client</artifactId>
-    <version>1.2</version>
+    <groupId>com.github.remoterobot</groupId>
+    <artifactId>client</artifactId>
+    <version>0.1.5-BETA</version>
     <packaging>jar</packaging>
 
-    <description>Remote Java Robot Client</description>
+    <description>Remote Robot Client</description>
 
     <parent>
-        <groupId>com.propellerads.utils</groupId>
-        <artifactId>remote-robot-parent</artifactId>
-        <version>1.0</version>
+        <groupId>com.github.remoterobot</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.1.5-BETA</version>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>com.propellerads.utils</groupId>
-            <artifactId>remote-robot-commons</artifactId>
-            <version>1.0</version>
+            <groupId>com.github.remoterobot</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.1.5-BETA</version>
         </dependency>
     </dependencies>
 
