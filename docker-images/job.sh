@@ -2,17 +2,17 @@
 
 echo "### Build and deploy docker-images ###"
 
-export IMAGE_NAME=selenoid_with_remote_java_robot
+#echo "### Login to DockerHub ###"
+#echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USER_NAME --password-stdin
 
-echo "### Login to DockerHub ###"
-echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USER_NAME --password-stdin
+selenoid_images=(
+	chrome_71.0
+	chrome_72.0
 
+	firefox_64.0
+)
 
-BROWSER=chrome TAG=vnc_chrome_65 docker-images/build_and_deploy_image.sh
-BROWSER=chrome TAG=vnc_chrome_67 docker-images/build_and_deploy_image.sh
-BROWSER=chrome TAG=vnc_chrome_70 docker-images/build_and_deploy_image.sh
-
-
-
-# 'awk' don't work in Travis :(
-#docker images | grep $IMAGE_NAME | awk '{print $1":"$2 }' | xargs -I {} docker push
+for base_image in "${selenoid_images[@]}"
+do
+	ORIGINAL_SELENOID_IMAGE=$base_image VERSION=${VERSION} docker-images/selenoid/build_and_deploy_image.sh
+done

@@ -3,7 +3,7 @@
 
     <groupId>com.github.remoterobot</groupId>
     <artifactId>parent</artifactId>
-    <version>0.1.6-BETA-SNAPSHOT</version>
+    <version>0.1.5</version>
     <packaging>pom</packaging>
     <name>remote-robot</name>
 
@@ -40,7 +40,7 @@
     </modules>
 
     <properties>
-        <!--<project.global.version>0.1.5-BETA-SNAPSHOT-SNAPSHOT</project.global.version>-->
+        <!--<project.global.version>0.1.5-SNAPSHOT</project.global.version>-->
         <maven.source.plugin.version>2.1.2</maven.source.plugin.version>
         <slf4j.version>1.7.25</slf4j.version>
         <apache.mina.version>2.0.19</apache.mina.version>

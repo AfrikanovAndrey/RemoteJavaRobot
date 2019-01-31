@@ -1,0 +1,24 @@
+{
+  "firefox": {
+    "default": "64",
+    "versions": {
+      "64": {
+        "image": "selenoid_with_remote_java_robot/firefox_64.0:latest",
+        "port": "4444",
+        "path": "/wd/hub",
+        "publishAllPorts": true
+      }
+    }
+  },
+  "chrome": {
+    "default": "70",
+    "versions": {
+      "70": {
+        "image": "selenoid_with_remote_java_robot/chrome_70.0:latest",
+        "port": "4444",
+        "path": "/",
+        "publishAllPorts": true
+      }
+    }
+  }
+}
