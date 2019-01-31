@@ -2,21 +2,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.remoterobot</groupId>
     <artifactId>server</artifactId>
-    <version>0.1.5-BETA</version>
+    <version>0.1.6-BETA-SNAPSHOT</version>
 
     <description>Remote Robot Server</description>
 
     <parent>
         <groupId>com.github.remoterobot</groupId>
         <artifactId>parent</artifactId>
-        <version>0.1.5-BETA</version>
+        <version>0.1.6-BETA-SNAPSHOT</version>
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>com.github.remoterobot</groupId>
             <artifactId>commons</artifactId>
-            <version>0.1.5-BETA</version>
+            <version>0.1.6-BETA-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
